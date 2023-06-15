@@ -8,7 +8,7 @@ all: gotool build
 
 build:
 	mkdir -p ${OUTPUT}/bin
-	CGO_ENABLED=0 GOOS=linux GOARCH=${GOARCH} go build -o ${OUTPUT}/bin/${BINARY}
+	CGO_ENABLED=0 GOOS=linux GOARCH=${GOARCH} go build -o ${OUTPUT}/bin/${BINARY} cmd/main.go
 
 run:
 	@go run ./
